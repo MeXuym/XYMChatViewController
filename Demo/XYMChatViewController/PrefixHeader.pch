@@ -1,0 +1,34 @@
+//
+//  PrefixHeader.pch
+//  XYMChatViewController
+//
+//  Created by jack xu on 17/1/4.
+//  Copyright © 2017年 jack xu. All rights reserved.
+//
+
+#ifdef __OBJC__
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "UIView+Custom.h"
+#import "hhmkPublic.h"
+#import "DialogUtil.h"
+#import "JSONAddition.h"
+#import "UIImageView+WebCache.h"
+#import "NSDictionary+Custom.h"
+#import "MyUserInfo.h"
+#import "NSString+Code.h"
+#import "NSDate+Custom.h"
+#import "NSTimer+Addition.h"
+#import "NSStringAddition.h"
+#import "MobClick.h"
+#import "extobjc.h"
+#import "LaunchStateManager.h"
+#import "HHMKConsts.h"
+#endif
+
+#ifndef __OPTIMIZE__
+# define NSLog(...) NSLog(__VA_ARGS__)
+#else
+# define NSLog(...)
+#endif
