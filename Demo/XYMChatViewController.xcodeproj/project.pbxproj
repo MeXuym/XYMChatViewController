@@ -333,6 +333,7 @@
 		5D4807CF1E1E4EFA00FC9259 /* libz.1.2.5.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D4807CE1E1E4EFA00FC9259 /* libz.1.2.5.tbd */; };
 		5D4807D11E1E4F0400FC9259 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D4807D01E1E4F0400FC9259 /* libz.tbd */; };
 		5D4807D31E1E516D00FC9259 /* libIMNet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D4807D21E1E516D00FC9259 /* libIMNet.a */; };
+		5D4807D71E1E601A00FC9259 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4807D61E1E601A00FC9259 /* RootViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -918,6 +919,8 @@
 		5D4807CE1E1E4EFA00FC9259 /* libz.1.2.5.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.2.5.tbd; path = usr/lib/libz.1.2.5.tbd; sourceTree = SDKROOT; };
 		5D4807D01E1E4F0400FC9259 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		5D4807D21E1E516D00FC9259 /* libIMNet.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libIMNet.a; path = libs/libIMNet.a; sourceTree = "<group>"; };
+		5D4807D51E1E601A00FC9259 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RootViewController.h; path = XYMChatViewController/RootViewController.h; sourceTree = "<group>"; };
+		5D4807D61E1E601A00FC9259 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RootViewController.m; path = XYMChatViewController/RootViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -956,11 +959,7 @@
 		5D182E011E1CE29600170959 = {
 			isa = PBXGroup;
 			children = (
-				5D4807D01E1E4F0400FC9259 /* libz.tbd */,
-				5D4807CE1E1E4EFA00FC9259 /* libz.1.2.5.tbd */,
-				5D4807CC1E1E4D5800FC9259 /* libicucore.A.tbd */,
-				5D4807CA1E1E4B8E00FC9259 /* libsqlite3.tbd */,
-				5D4807D21E1E516D00FC9259 /* libIMNet.a */,
+				5D4807D41E1E5EEA00FC9259 /* Frameworks */,
 				5D182E0C1E1CE29600170959 /* XYMChatViewController */,
 				5D182E261E1CE29600170959 /* XYMChatViewControllerTests */,
 				5D182E311E1CE29600170959 /* XYMChatViewControllerUITests */,
@@ -988,6 +987,8 @@
 				5D182E401E1CE54F00170959 /* XYMChatViewController */,
 				5D182E101E1CE29600170959 /* AppDelegate.h */,
 				5D182E111E1CE29600170959 /* AppDelegate.m */,
+				5D4807D51E1E601A00FC9259 /* RootViewController.h */,
+				5D4807D61E1E601A00FC9259 /* RootViewController.m */,
 				5D4807C91E1E484900FC9259 /* IMServerManager.h */,
 				5D4807C81E1E472000FC9259 /* IMdefine.h */,
 				5D182E131E1CE29600170959 /* ViewController.h */,
@@ -1033,9 +1034,9 @@
 		5D182E401E1CE54F00170959 /* XYMChatViewController */ = {
 			isa = PBXGroup;
 			children = (
-				5D18316D1E1D001D00170959 /* View */,
 				5D182F511E1CE5BE00170959 /* TestChatViewController.h */,
 				5D182F521E1CE5BE00170959 /* TestChatViewController.m */,
+				5D18316D1E1D001D00170959 /* View */,
 				5D182F611E1CE80200170959 /* Model */,
 				5D182E411E1CE54F00170959 /* XYMChatCell */,
 				5D182E571E1CE54F00170959 /* XYMMessageInput */,
@@ -2084,6 +2085,18 @@
 			path = IM;
 			sourceTree = "<group>";
 		};
+		5D4807D41E1E5EEA00FC9259 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5D4807D01E1E4F0400FC9259 /* libz.tbd */,
+				5D4807CE1E1E4EFA00FC9259 /* libz.1.2.5.tbd */,
+				5D4807CC1E1E4D5800FC9259 /* libicucore.A.tbd */,
+				5D4807CA1E1E4B8E00FC9259 /* libsqlite3.tbd */,
+				5D4807D21E1E516D00FC9259 /* libIMNet.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -2336,6 +2349,7 @@
 				5D1831561E1CFE3800170959 /* MJPhotoView.m in Sources */,
 				5D182F4D1E1CE54F00170959 /* XYMMoreMenuItem.m in Sources */,
 				5D1830431E1CF56D00170959 /* UIButton+Custom.m in Sources */,
+				5D4807D71E1E601A00FC9259 /* RootViewController.m in Sources */,
 				5D18300E1E1CF53B00170959 /* NSStringAddition.m in Sources */,
 				5D4807B41E1DE56B00FC9259 /* RegexKitLite.m in Sources */,
 				5D4807A11E1DE48E00FC9259 /* MJRefreshBackNormalFooter.m in Sources */,
