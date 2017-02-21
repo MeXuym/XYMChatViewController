@@ -177,6 +177,7 @@
 #pragma mark 点击发送
 - (void)sendAction
 {
+    NSLog(@"点击键盘上的发送按钮");
     if (textView_.text.length > 0) {
         
         if (self.delegate && [self.delegate respondsToSelector:@selector(sendTextAction:)])
