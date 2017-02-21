@@ -473,8 +473,6 @@
             message.consultId = consultId;
             message.isSend=YES;
             [[EMessagesDB shareInstance] updateWithMessage:message];
-            //这个统计有问题，医生主动发起咨询数，不应该放这里，这里是发送消息的时候就统计
-            [MobClick event:@"h_dr_chat" attributes:@{@"dr_Id":[NSString stringWithFormat:@"%d",[MyUserInfo myInfo].userId],@"time":[[NSDate date] getDateString:@"yyyy-MM-dd HH:mm:ss"],@"patient_Id":toUID,@"session_Id":[NSString stringWithFormat:@"%d",sessionId]}];
         }
         else
         {
