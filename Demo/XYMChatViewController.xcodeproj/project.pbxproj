@@ -290,10 +290,6 @@
 		5D1831541E1CFE3800170959 /* MJPhotoProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D18314B1E1CFE3800170959 /* MJPhotoProgressView.m */; };
 		5D1831551E1CFE3800170959 /* MJPhotoToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D18314D1E1CFE3800170959 /* MJPhotoToolbar.m */; };
 		5D1831561E1CFE3800170959 /* MJPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D18314F1E1CFE3800170959 /* MJPhotoView.m */; };
-		5D1831691E1CFEE500170959 /* amrFileCodec.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D18315C1E1CFEE500170959 /* amrFileCodec.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		5D18316A1E1CFEE500170959 /* libopencore-amrnb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D1831651E1CFEE500170959 /* libopencore-amrnb.a */; };
-		5D18316B1E1CFEE500170959 /* libopencore-amrwb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D1831661E1CFEE500170959 /* libopencore-amrwb.a */; };
-		5D18316C1E1CFEE500170959 /* RecordAudio.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1831681E1CFEE500170959 /* RecordAudio.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		5D1831741E1D001D00170959 /* BadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D18316F1E1D001D00170959 /* BadgeView.m */; };
 		5D1831751E1D001D00170959 /* ChatLogViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1831711E1D001D00170959 /* ChatLogViewCell.m */; };
 		5D1831761E1D001D00170959 /* RecordSoundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1831731E1D001D00170959 /* RecordSoundView.m */; };
@@ -398,6 +394,10 @@
 		5D4808571E1E63D200FC9259 /* wolume_animation4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D4808171E1E63D200FC9259 /* wolume_animation4@2x.png */; };
 		5D4808581E1E63D200FC9259 /* wolume_animation5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D4808181E1E63D200FC9259 /* wolume_animation5@2x.png */; };
 		5D4808591E1E63D200FC9259 /* wolume_animation6@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D4808191E1E63D200FC9259 /* wolume_animation6@2x.png */; };
+		F32F0D7F1E5C2B67009987FF /* amrFileCodec.m in Sources */ = {isa = PBXBuildFile; fileRef = F32F0D721E5C2B67009987FF /* amrFileCodec.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		F32F0D801E5C2B67009987FF /* libopencore-amrnb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F32F0D7B1E5C2B67009987FF /* libopencore-amrnb.a */; };
+		F32F0D811E5C2B67009987FF /* libopencore-amrwb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F32F0D7C1E5C2B67009987FF /* libopencore-amrwb.a */; };
+		F32F0D821E5C2B67009987FF /* RecordAudio.m in Sources */ = {isa = PBXBuildFile; fileRef = F32F0D7E1E5C2B67009987FF /* RecordAudio.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -899,16 +899,6 @@
 		5D18314D1E1CFE3800170959 /* MJPhotoToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJPhotoToolbar.m; sourceTree = "<group>"; };
 		5D18314E1E1CFE3800170959 /* MJPhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPhotoView.h; sourceTree = "<group>"; };
 		5D18314F1E1CFE3800170959 /* MJPhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJPhotoView.m; sourceTree = "<group>"; };
-		5D18315B1E1CFEE500170959 /* amrFileCodec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = amrFileCodec.h; sourceTree = "<group>"; };
-		5D18315C1E1CFEE500170959 /* amrFileCodec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = amrFileCodec.m; sourceTree = "<group>"; };
-		5D18315F1E1CFEE500170959 /* interf_dec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interf_dec.h; sourceTree = "<group>"; };
-		5D1831601E1CFEE500170959 /* interf_enc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interf_enc.h; sourceTree = "<group>"; };
-		5D1831621E1CFEE500170959 /* dec_if.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dec_if.h; sourceTree = "<group>"; };
-		5D1831631E1CFEE500170959 /* if_rom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = if_rom.h; sourceTree = "<group>"; };
-		5D1831651E1CFEE500170959 /* libopencore-amrnb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrnb.a"; sourceTree = "<group>"; };
-		5D1831661E1CFEE500170959 /* libopencore-amrwb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrwb.a"; sourceTree = "<group>"; };
-		5D1831671E1CFEE500170959 /* RecordAudio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordAudio.h; sourceTree = "<group>"; };
-		5D1831681E1CFEE500170959 /* RecordAudio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordAudio.m; sourceTree = "<group>"; };
 		5D18316E1E1D001D00170959 /* BadgeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BadgeView.h; sourceTree = "<group>"; };
 		5D18316F1E1D001D00170959 /* BadgeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BadgeView.m; sourceTree = "<group>"; };
 		5D1831701E1D001D00170959 /* ChatLogViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatLogViewCell.h; sourceTree = "<group>"; };
@@ -1049,6 +1039,16 @@
 		5D4808171E1E63D200FC9259 /* wolume_animation4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wolume_animation4@2x.png"; sourceTree = "<group>"; };
 		5D4808181E1E63D200FC9259 /* wolume_animation5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wolume_animation5@2x.png"; sourceTree = "<group>"; };
 		5D4808191E1E63D200FC9259 /* wolume_animation6@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wolume_animation6@2x.png"; sourceTree = "<group>"; };
+		F32F0D711E5C2B67009987FF /* amrFileCodec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = amrFileCodec.h; sourceTree = "<group>"; };
+		F32F0D721E5C2B67009987FF /* amrFileCodec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = amrFileCodec.m; sourceTree = "<group>"; };
+		F32F0D751E5C2B67009987FF /* interf_dec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interf_dec.h; sourceTree = "<group>"; };
+		F32F0D761E5C2B67009987FF /* interf_enc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interf_enc.h; sourceTree = "<group>"; };
+		F32F0D781E5C2B67009987FF /* dec_if.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dec_if.h; sourceTree = "<group>"; };
+		F32F0D791E5C2B67009987FF /* if_rom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = if_rom.h; sourceTree = "<group>"; };
+		F32F0D7B1E5C2B67009987FF /* libopencore-amrnb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrnb.a"; sourceTree = "<group>"; };
+		F32F0D7C1E5C2B67009987FF /* libopencore-amrwb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrwb.a"; sourceTree = "<group>"; };
+		F32F0D7D1E5C2B67009987FF /* RecordAudio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordAudio.h; sourceTree = "<group>"; };
+		F32F0D7E1E5C2B67009987FF /* RecordAudio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordAudio.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1058,12 +1058,12 @@
 			files = (
 				5D4807D11E1E4F0400FC9259 /* libz.tbd in Frameworks */,
 				5D4807CF1E1E4EFA00FC9259 /* libz.1.2.5.tbd in Frameworks */,
+				F32F0D811E5C2B67009987FF /* libopencore-amrwb.a in Frameworks */,
 				5D4807CD1E1E4D5800FC9259 /* libicucore.A.tbd in Frameworks */,
 				5D4807CB1E1E4B8E00FC9259 /* libsqlite3.tbd in Frameworks */,
+				F32F0D801E5C2B67009987FF /* libopencore-amrnb.a in Frameworks */,
 				5D1830171E1CF53B00170959 /* libMobClickLibrary.a in Frameworks */,
 				5D4807D31E1E516D00FC9259 /* libIMNet.a in Frameworks */,
-				5D18316B1E1CFEE500170959 /* libopencore-amrwb.a in Frameworks */,
-				5D18316A1E1CFEE500170959 /* libopencore-amrnb.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1421,13 +1421,13 @@
 		5D182F6E1E1CE94900170959 /* ThridParty */ = {
 			isa = PBXGroup;
 			children = (
+				F32F0D701E5C2B67009987FF /* amr */,
 				5D4807BD1E1DE92500FC9259 /* Reachability */,
 				5D4807B51E1DE77200FC9259 /* OpenUDID */,
 				5D4807AB1E1DE56B00FC9259 /* CoreText */,
 				5D48076B1E1DE48E00FC9259 /* MJRefresh */,
 				5D18317B1E1D044500170959 /* FLAnimatedImage */,
 				5D1831771E1D032900170959 /* KGModal */,
-				5D18315A1E1CFEE500170959 /* amr */,
 				5D1831421E1CFE3800170959 /* MJPhotoBrowser */,
 				5D1831241E1CFE0600170959 /* QBImagePickerController */,
 				5D1831081E1CFD7800170959 /* OHAttributedLabel */,
@@ -1987,55 +1987,6 @@
 			path = MJPhotoBrowser;
 			sourceTree = "<group>";
 		};
-		5D18315A1E1CFEE500170959 /* amr */ = {
-			isa = PBXGroup;
-			children = (
-				5D18315B1E1CFEE500170959 /* amrFileCodec.h */,
-				5D18315C1E1CFEE500170959 /* amrFileCodec.m */,
-				5D18315D1E1CFEE500170959 /* include */,
-				5D1831641E1CFEE500170959 /* lib */,
-				5D1831671E1CFEE500170959 /* RecordAudio.h */,
-				5D1831681E1CFEE500170959 /* RecordAudio.m */,
-			);
-			path = amr;
-			sourceTree = "<group>";
-		};
-		5D18315D1E1CFEE500170959 /* include */ = {
-			isa = PBXGroup;
-			children = (
-				5D18315E1E1CFEE500170959 /* opencore-amrnb */,
-				5D1831611E1CFEE500170959 /* opencore-amrwb */,
-			);
-			path = include;
-			sourceTree = "<group>";
-		};
-		5D18315E1E1CFEE500170959 /* opencore-amrnb */ = {
-			isa = PBXGroup;
-			children = (
-				5D18315F1E1CFEE500170959 /* interf_dec.h */,
-				5D1831601E1CFEE500170959 /* interf_enc.h */,
-			);
-			path = "opencore-amrnb";
-			sourceTree = "<group>";
-		};
-		5D1831611E1CFEE500170959 /* opencore-amrwb */ = {
-			isa = PBXGroup;
-			children = (
-				5D1831621E1CFEE500170959 /* dec_if.h */,
-				5D1831631E1CFEE500170959 /* if_rom.h */,
-			);
-			path = "opencore-amrwb";
-			sourceTree = "<group>";
-		};
-		5D1831641E1CFEE500170959 /* lib */ = {
-			isa = PBXGroup;
-			children = (
-				5D1831651E1CFEE500170959 /* libopencore-amrnb.a */,
-				5D1831661E1CFEE500170959 /* libopencore-amrwb.a */,
-			);
-			path = lib;
-			sourceTree = "<group>";
-		};
 		5D18316D1E1D001D00170959 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -2305,6 +2256,55 @@
 			path = chat;
 			sourceTree = "<group>";
 		};
+		F32F0D701E5C2B67009987FF /* amr */ = {
+			isa = PBXGroup;
+			children = (
+				F32F0D711E5C2B67009987FF /* amrFileCodec.h */,
+				F32F0D721E5C2B67009987FF /* amrFileCodec.m */,
+				F32F0D731E5C2B67009987FF /* include */,
+				F32F0D7A1E5C2B67009987FF /* lib */,
+				F32F0D7D1E5C2B67009987FF /* RecordAudio.h */,
+				F32F0D7E1E5C2B67009987FF /* RecordAudio.m */,
+			);
+			path = amr;
+			sourceTree = "<group>";
+		};
+		F32F0D731E5C2B67009987FF /* include */ = {
+			isa = PBXGroup;
+			children = (
+				F32F0D741E5C2B67009987FF /* opencore-amrnb */,
+				F32F0D771E5C2B67009987FF /* opencore-amrwb */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		F32F0D741E5C2B67009987FF /* opencore-amrnb */ = {
+			isa = PBXGroup;
+			children = (
+				F32F0D751E5C2B67009987FF /* interf_dec.h */,
+				F32F0D761E5C2B67009987FF /* interf_enc.h */,
+			);
+			path = "opencore-amrnb";
+			sourceTree = "<group>";
+		};
+		F32F0D771E5C2B67009987FF /* opencore-amrwb */ = {
+			isa = PBXGroup;
+			children = (
+				F32F0D781E5C2B67009987FF /* dec_if.h */,
+				F32F0D791E5C2B67009987FF /* if_rom.h */,
+			);
+			path = "opencore-amrwb";
+			sourceTree = "<group>";
+		};
+		F32F0D7A1E5C2B67009987FF /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				F32F0D7B1E5C2B67009987FF /* libopencore-amrnb.a */,
+				F32F0D7C1E5C2B67009987FF /* libopencore-amrwb.a */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -2372,6 +2372,7 @@
 				TargetAttributes = {
 					5D182E091E1CE29600170959 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 36T337U46L;
 					};
 					5D182E221E1CE29600170959 = {
 						CreatedOnToolsVersion = 7.3;
@@ -2648,6 +2649,7 @@
 				5D1830871E1CF7DB00170959 /* AFURLConnectionOperation.m in Sources */,
 				5D1830501E1CF56D00170959 /* UIView+Custom.m in Sources */,
 				5D4807B31E1DE56B00FC9259 /* MarkupParser.m in Sources */,
+				F32F0D821E5C2B67009987FF /* RecordAudio.m in Sources */,
 				5D182F4F1E1CE54F00170959 /* XYMSendManager.m in Sources */,
 				5D1830031E1CF53B00170959 /* EXTConcreteProtocol.m in Sources */,
 				5D182F501E1CE54F00170959 /* XYMSessionManager.m in Sources */,
@@ -2673,7 +2675,6 @@
 				5D1831551E1CFE3800170959 /* MJPhotoToolbar.m in Sources */,
 				5D1830B01E1CFA3000170959 /* EUserInfo.m in Sources */,
 				5D18311C1E1CFD7800170959 /* NSAttributedString+Attributes.m in Sources */,
-				5D1831691E1CFEE500170959 /* amrFileCodec.m in Sources */,
 				5D18304D1E1CF56D00170959 /* HPTextViewInternal.m in Sources */,
 				5D182FA71E1CE94900170959 /* UIImage+GIF.m in Sources */,
 				5D182F681E1CE80200170959 /* EMessagesDB.m in Sources */,
@@ -2695,6 +2696,7 @@
 				5D182FAA1E1CE94900170959 /* UIImageView+HighlightedWebCache.m in Sources */,
 				5D1830EC1E1CFBC600170959 /* GTM_Base64.m in Sources */,
 				5D1831521E1CFE3800170959 /* MJPhotoBrowser.m in Sources */,
+				F32F0D7F1E5C2B67009987FF /* amrFileCodec.m in Sources */,
 				5D1831401E1CFE0600170959 /* QBImagePickerVideoInfoView.m in Sources */,
 				5D1830F21E1CFBC600170959 /* QNUrlSafeBase64.m in Sources */,
 				5D48079F1E1DE48E00FC9259 /* MJRefreshAutoStateFooter.m in Sources */,
@@ -2797,7 +2799,6 @@
 				5D1830041E1CF53B00170959 /* EXTNil.m in Sources */,
 				5D1830011E1CF53B00170959 /* WaitingWindow.m in Sources */,
 				5D1830841E1CF7DB00170959 /* AFHTTPSessionManager.m in Sources */,
-				5D18316C1E1CFEE500170959 /* RecordAudio.m in Sources */,
 				5D18311F1E1CFD7800170959 /* OHASBasicMarkupParser.m in Sources */,
 				5D182FAB1E1CE94900170959 /* UIImageView+WebCache.m in Sources */,
 				5D1830B31E1CFA5400170959 /* ETagInfo.m in Sources */,
@@ -2885,7 +2886,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Guangzhou Ihealthcoming Information Technolody Co.,Ltd. (36T337U46L)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -2929,7 +2930,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Guangzhou Ihealthcoming Information Technolody Co.,Ltd. (36T337U46L)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -2953,7 +2954,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				GCC_PREFIX_HEADER = "/Users/jackxu/Desktop/封装/XYMChatVC/Demo/XYMChatViewController/PrefixHeader.pch";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				GCC_PREFIX_HEADER = /Users/xuym/XYMChatViewController/Demo/XYMChatViewController/PrefixHeader.pch;
 				INFOPLIST_FILE = XYMChatViewController/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -2972,7 +2975,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				GCC_PREFIX_HEADER = "/Users/jackxu/Desktop/封装/XYMChatVC/Demo/XYMChatViewController/PrefixHeader.pch";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				GCC_PREFIX_HEADER = /Users/xuym/XYMChatViewController/Demo/XYMChatViewController/PrefixHeader.pch;
 				INFOPLIST_FILE = XYMChatViewController/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
