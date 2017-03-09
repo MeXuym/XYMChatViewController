@@ -458,6 +458,7 @@
 {
     if(!isRepeat)
     {
+        //消息入库
         [[EMessagesDB shareInstance] insertWithMessage:message];
     }
     
@@ -466,6 +467,7 @@
 
 -(void)sendMessage:(EMessage*)message
 {
+    //模拟发送的请求
     [XYMSendManager sendMessage:message completed:^(BOOL success, int sessionId, int consultId) {
         if(success)
         {

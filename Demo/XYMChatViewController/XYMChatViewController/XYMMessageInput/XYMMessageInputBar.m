@@ -182,6 +182,7 @@
         
         if (self.delegate && [self.delegate respondsToSelector:@selector(sendTextAction:)])
         {
+            //给代理发送消息
             [self.delegate sendTextAction:textView_.text];
         }
         textView_.text = @"";
