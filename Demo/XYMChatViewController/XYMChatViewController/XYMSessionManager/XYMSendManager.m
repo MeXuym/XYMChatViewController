@@ -187,8 +187,8 @@
 //模拟发送消息请求
 +(void)sendMessage:(EMessage*)message completed:(SendCompleted)completed isQuestion:(int)isQuestion
 {
-    //模拟发送消息成功
-    completed(YES, 240508, 240508);
+    //模拟发送消息成功 250693, 625410
+    completed(YES, 250693, 250693);
 }
 
 
