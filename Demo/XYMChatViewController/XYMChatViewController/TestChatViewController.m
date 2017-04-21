@@ -509,6 +509,7 @@
 
 -(void)sendText:(NSString*)text isQuestion:(int)isQuestion
 {
+    //组装消息对象
     EMessage* message = [XYMSendManager textMessageCreater:text toUID:toUID myUID:currentUID isGroup:currentType];
     message.isQuestion = isQuestion;
     [self sendMessage:message isRepeat:NO];

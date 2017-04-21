@@ -49,10 +49,7 @@
         UIImageView *photoView = [[UIImageView alloc]initWithFrame:CGRectMake(0, (ScreenHeight - ScreenWidth*(size.height/size.width))*0.5, ScreenWidth, ScreenWidth*(size.height/size.width))];
         photoView.image = photo;
         [self.view addSubview:photoView];
-        
     }
-
-    
 }
 
 - (void)didReceiveMemoryWarning {
