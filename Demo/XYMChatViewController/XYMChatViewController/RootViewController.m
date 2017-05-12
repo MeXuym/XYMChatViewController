@@ -8,6 +8,7 @@
 
 #import "RootViewController.h"
 #import "TestChatViewController.h"
+#import "XUYMChatViewController.h"
 
 @interface RootViewController ()
 
@@ -29,12 +30,15 @@
 
 -(void)startScan{
     
-    TestChatViewController* viewController = [[TestChatViewController alloc] initWithUID:@"6990" myUID:@"6991" chatName:@"测试聊天" isGroup:NO];
-    viewController.patientSex = 1;
-    viewController.age = 15;
-    viewController.hidesBottomBarWhenPushed = YES;
-    viewController.chatName = @"测试聊天";
-    viewController.tagStr = @"测试聊天";
+//    TestChatViewController* viewController = [[TestChatViewController alloc] initWithUID:@"6990" myUID:@"6991" chatName:@"测试聊天" isGroup:NO];
+//    viewController.patientSex = 1;
+//    viewController.age = 15;
+//    viewController.hidesBottomBarWhenPushed = YES;
+//    viewController.chatName = @"测试聊天";
+//    viewController.tagStr = @"测试聊天";
+    
+    XUYMChatViewController *viewController = [[XUYMChatViewController alloc]init];
+    viewController.view.backgroundColor = [UIColor whiteColor];//这里的一些初始设置要放到VC的init里面
     
     [self.navigationController pushViewController:viewController animated:YES];
 }
@@ -43,15 +47,5 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

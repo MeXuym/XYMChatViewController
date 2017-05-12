@@ -22,7 +22,7 @@
 
 @implementation XYMMessageInputBar
 
-@synthesize currentState=currentState_;
+@synthesize currentState = currentState_;
 
 - (id)initWithFrame:(CGRect)frame superView:(const UIView*)view
 {
