@@ -146,6 +146,19 @@
 
 
 #pragma mark - private methods
+#pragma mark 点击发送
+- (void)sendAction
+{
+    if (self.textView.text.length > 0) {
+        if (self.delegate && [self.delegate respondsToSelector:@selector(sendTextAction:)])
+        {
+            [self.delegate sendTextAction:self.textView.text];
+        }
+        self.textView.text = @"";//输入框置空（这里置空是不是最合适的位置）
+    }
+}
+
+
 #pragma mark 键盘高度回调事件
 - (void)callbackAction {
     

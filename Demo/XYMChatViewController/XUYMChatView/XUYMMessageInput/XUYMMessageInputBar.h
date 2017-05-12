@@ -14,6 +14,8 @@
 @optional
 #pragma 键盘高度变化代理
 - (void)keyboardAction:(CGFloat)height;
+#pragma 发送文字代理
+- (void)sendTextAction:(NSString*)text;
 
 @end
 

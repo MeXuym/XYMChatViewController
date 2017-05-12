@@ -399,6 +399,9 @@
 		F32F0D811E5C2B67009987FF /* libopencore-amrwb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F32F0D7C1E5C2B67009987FF /* libopencore-amrwb.a */; };
 		F32F0D821E5C2B67009987FF /* RecordAudio.m in Sources */ = {isa = PBXBuildFile; fileRef = F32F0D7E1E5C2B67009987FF /* RecordAudio.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		F3628EB01EC2C30000BFC70E /* XUYMChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3628EAF1EC2C30000BFC70E /* XUYMChatViewController.m */; };
+		F3EA5B971EC5A83000CF4055 /* XUYMSendMsgManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F3EA5B961EC5A83000CF4055 /* XUYMSendMsgManager.m */; };
+		F3EA5B9A1EC5AA0F00CF4055 /* XUYMMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = F3EA5B991EC5AA0F00CF4055 /* XUYMMessage.m */; };
+		F3EA5B9E1EC5B9DA00CF4055 /* XUYMMessageDB.m in Sources */ = {isa = PBXBuildFile; fileRef = F3EA5B9D1EC5B9DA00CF4055 /* XUYMMessageDB.m */; };
 		F3F141071EC301B500916C86 /* XUYMMessageInputBar.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F141061EC301B500916C86 /* XUYMMessageInputBar.m */; };
 		F3F1410B1EC4412000916C86 /* XUYMMessageInputManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F1410A1EC4412000916C86 /* XUYMMessageInputManager.m */; };
 /* End PBXBuildFile section */
@@ -1054,6 +1057,12 @@
 		F32F0D7E1E5C2B67009987FF /* RecordAudio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordAudio.m; sourceTree = "<group>"; };
 		F3628EAE1EC2C30000BFC70E /* XUYMChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XUYMChatViewController.h; sourceTree = "<group>"; };
 		F3628EAF1EC2C30000BFC70E /* XUYMChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XUYMChatViewController.m; sourceTree = "<group>"; };
+		F3EA5B951EC5A83000CF4055 /* XUYMSendMsgManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XUYMSendMsgManager.h; sourceTree = "<group>"; };
+		F3EA5B961EC5A83000CF4055 /* XUYMSendMsgManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XUYMSendMsgManager.m; sourceTree = "<group>"; };
+		F3EA5B981EC5AA0F00CF4055 /* XUYMMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XUYMMessage.h; sourceTree = "<group>"; };
+		F3EA5B991EC5AA0F00CF4055 /* XUYMMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XUYMMessage.m; sourceTree = "<group>"; };
+		F3EA5B9C1EC5B9DA00CF4055 /* XUYMMessageDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XUYMMessageDB.h; sourceTree = "<group>"; };
+		F3EA5B9D1EC5B9DA00CF4055 /* XUYMMessageDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XUYMMessageDB.m; sourceTree = "<group>"; };
 		F3F141051EC301B500916C86 /* XUYMMessageInputBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XUYMMessageInputBar.h; sourceTree = "<group>"; };
 		F3F141061EC301B500916C86 /* XUYMMessageInputBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XUYMMessageInputBar.m; sourceTree = "<group>"; };
 		F3F141091EC4412000916C86 /* XUYMMessageInputManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XUYMMessageInputManager.h; sourceTree = "<group>"; };
@@ -2318,7 +2327,8 @@
 		F3628EA81EC2C17700BFC70E /* XUYMChatView */ = {
 			isa = PBXGroup;
 			children = (
-				F3F141041EC2F87000916C86 /* XUYMMessageInput */,
+				F3EA5B9B1EC5B7A200CF4055 /* MessageDB */,
+				F3F141041EC2F87000916C86 /* MessageInput */,
 				F3628EA91EC2C17700BFC70E /* Controller */,
 				F3628EAA1EC2C17700BFC70E /* Model */,
 				F3628EAB1EC2C17700BFC70E /* View */,
@@ -2338,6 +2348,8 @@
 		F3628EAA1EC2C17700BFC70E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F3EA5B981EC5AA0F00CF4055 /* XUYMMessage.h */,
+				F3EA5B991EC5AA0F00CF4055 /* XUYMMessage.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -2349,13 +2361,33 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		F3F141041EC2F87000916C86 /* XUYMMessageInput */ = {
+		F3EA5B941EC5A80800CF4055 /* XUYMSendMsgManager */ = {
 			isa = PBXGroup;
 			children = (
+				F3EA5B951EC5A83000CF4055 /* XUYMSendMsgManager.h */,
+				F3EA5B961EC5A83000CF4055 /* XUYMSendMsgManager.m */,
+			);
+			path = XUYMSendMsgManager;
+			sourceTree = "<group>";
+		};
+		F3EA5B9B1EC5B7A200CF4055 /* MessageDB */ = {
+			isa = PBXGroup;
+			children = (
+				F3EA5B9C1EC5B9DA00CF4055 /* XUYMMessageDB.h */,
+				F3EA5B9D1EC5B9DA00CF4055 /* XUYMMessageDB.m */,
+			);
+			path = MessageDB;
+			sourceTree = "<group>";
+		};
+		F3F141041EC2F87000916C86 /* MessageInput */ = {
+			isa = PBXGroup;
+			children = (
+				F3EA5B941EC5A80800CF4055 /* XUYMSendMsgManager */,
 				F3F141081EC440F800916C86 /* XUYMMessageInputManager */,
 				F3F141051EC301B500916C86 /* XUYMMessageInputBar.h */,
 				F3F141061EC301B500916C86 /* XUYMMessageInputBar.m */,
 			);
+			name = MessageInput;
 			path = XUYMMessageInput;
 			sourceTree = "<group>";
 		};
@@ -2793,6 +2825,7 @@
 				5D182FA31E1CE94900170959 /* SDWebImageDownloaderOperation.m in Sources */,
 				5D18313F1E1CFE0600170959 /* QBImagePickerGroupCell.m in Sources */,
 				5D1830861E1CF7DB00170959 /* AFSecurityPolicy.m in Sources */,
+				F3EA5B9A1EC5AA0F00CF4055 /* XUYMMessage.m in Sources */,
 				5D1830AA1E1CF90200170959 /* FMDatabasePool.m in Sources */,
 				5D1830511E1CF56D00170959 /* UIWebView+Clean.m in Sources */,
 				5D182FAD1E1CE94900170959 /* UIView+WebCacheOperation.m in Sources */,
@@ -2807,6 +2840,7 @@
 				5D182EDA1E1CE54F00170959 /* XYMNewsContentView.m in Sources */,
 				5D1830FB1E1CFBC600170959 /* QNResumeUpload.m in Sources */,
 				5D4807A71E1DE48E00FC9259 /* MJRefreshConst.m in Sources */,
+				F3EA5B971EC5A83000CF4055 /* XUYMSendMsgManager.m in Sources */,
 				5D182ED61E1CE54F00170959 /* XYMHealthShareContentView.m in Sources */,
 				5D1830F51E1CFBC600170959 /* QNResponseInfo.m in Sources */,
 				5D1830831E1CF7DB00170959 /* AFHTTPRequestOperationManager.m in Sources */,
@@ -2841,6 +2875,7 @@
 				5D182ED81E1CE54F00170959 /* XYMMessageContentButton.m in Sources */,
 				5D1831391E1CFE0600170959 /* QBAssetCollectionViewController.m in Sources */,
 				5D18313D1E1CFE0600170959 /* QBImagePickerController.m in Sources */,
+				F3EA5B9E1EC5B9DA00CF4055 /* XUYMMessageDB.m in Sources */,
 				5D182EDC1E1CE54F00170959 /* XYMVoiceContentView.m in Sources */,
 				5D1830891E1CF7DB00170959 /* AFURLResponseSerialization.m in Sources */,
 				5D1830FE1E1CFBC600170959 /* QNUpToken.m in Sources */,

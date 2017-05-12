@@ -8,6 +8,9 @@
 
 #import "XUYMChatViewController.h"
 #import "XUYMMessageInputBar.h"
+#import "XUYMSendMsgManager.h"
+#import "XUYMMessage.h"
+#import "XUYMMessageDB.h"
 
 #define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
@@ -98,38 +101,78 @@
 }
 
 #pragma mark - XUYMMessageInputBarDelegate
--(void)keyboardAction:(CGFloat)height
-{
+//键盘高度
+- (void)keyboardAction:(CGFloat)height {
+    
     CGRect frame = self.chatLogTableView.frame;
     frame.size.height = height;
     self.chatLogTableView.frame = frame;
-    if(self.inputBar.currentState != XUYMViewStateShowNone)
-    {
+    if(self.inputBar.currentState != XUYMViewStateShowNone) {
+        
         [self scrollTableViewToBottom:YES];
     }
 
 }
 
+//发送文本消息
+- (void)sendTextAction:(NSString *)text {
+    
+    NSString* textContent = [text stringByReplacingOccurrencesOfString:@" " withString:@""];
+    if(textContent.length == 0) {
+        
+        [DialogUtil postAlertWithMessage:@"不能输入空白消息"];
+        return;
+    }
+    [self sendText:text];
+}
+
+
 
 #pragma mark - private methods
--(void)tapGestureRecognizer:(UITapGestureRecognizer*)getstureRecognizer
-{
-    if(getstureRecognizer.state==UIGestureRecognizerStateEnded)
-    {
+
+//发送消息具体处理
+- (void)sendText:(NSString *)text {
+    
+    XUYMMessage* message = [XUYMSendMsgManager textMessageCreater:text toUID:@"test" myUID:@"test" isGroup:YES];
+    [self sendMessage:message isRepeat:NO];
+}
+
+//发送消息
+-(void)sendMessage:(XUYMMessage *)message isRepeat:(BOOL)isRepeat {
+    
+    if(!isRepeat) {
+        //消息入库
+        [[XUYMMessageDB shareInstance] insertWithMessage:message];
+    }
+    [self sendMessage:message];
+}
+
+//模拟消息发送
+-(void)sendMessage:(XUYMMessage *)message {
+    
+    NSLog(@"模拟消息发送");
+}
+
+
+//tableView滑动键盘回收
+-(void)tapGestureRecognizer:(UITapGestureRecognizer*)getstureRecognizer {
+    
+    if(getstureRecognizer.state==UIGestureRecognizerStateEnded){
+        
         [self hideKeyBoardAndPopup];
     }
 }
 
--(void)hideKeyBoardAndPopup
-{
+-(void)hideKeyBoardAndPopup {
+    
     [self.inputBar hideKeyBoard];
 }
 
 #pragma mark UITableView滚动到最底
--(void)scrollTableViewToBottom:(BOOL)animated
-{
-    if (self.currentArray.count>0)
-    {
+-(void)scrollTableViewToBottom:(BOOL)animated {
+    
+    if (self.currentArray.count>0) {
+        
         [self.chatLogTableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:self.currentArray.count-1 inSection:0]
                           atScrollPosition:UITableViewScrollPositionBottom animated:animated];
     }
