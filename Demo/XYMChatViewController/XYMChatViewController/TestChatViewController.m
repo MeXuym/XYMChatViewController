@@ -55,6 +55,7 @@
     BOOL isShow;
     NSInteger curCellIndex;
 }
+
 @end
 
 @implementation TestChatViewController
@@ -1213,7 +1214,7 @@
     CGRect frame=mainTable_.frame;
     frame.size.height=height;
     mainTable_.frame=frame;
-    if(inputBar_.currentState!=XYMViewStateShowNone)
+    if(inputBar_.currentState != XYMViewStateShowNone)
     {
         [self scrollTableViewToBottom:YES];
     }
